@@ -27250,18 +27250,17 @@ product-quickview.loading button .btn-state-loading {
 
 .brauz-cart-item-message {
   position: relative;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .brauz-cart-item-message > div {
-  background-color: #fed0cf;
+  background-color: #fbf3f3;
   display: inline-block;
-  color: #fc9790;
-  border: 1px solid #fc9790;
+  color: #D8253D;
+  border: 1px solid #D8253D;
   font-size: calc(var(--font-3) * var(--FONT-ADJUST-BODY));
   line-height: var(--leading-normal);
   padding: 0 5px;
-  margin: -5px 0 10px;
   position: absolute;
   top: -25px;
   left: 0;
