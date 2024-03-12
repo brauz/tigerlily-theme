@@ -189,46 +189,5 @@
     {%- endif -%}
 
     {{ accordion_blocks_html }}
-
-    {%- if block.settings.enable_find_in_store -%}
-      {% assign block_id = block.id | append: '-store' %}
-      <div class="accordion__wrapper">
-        <button class="accordion__title js"
-          data-accordion-trigger="{{ block_id }}"
-          aria-controls="{{ block_id }}"
-          aria-haspopup="true"
-          aria-expanded="false">
-          {%- render 'icons', filename: block.settings.icon_find_in_store -%}
-          {{ block.settings.find_in_store_title }}
-        </button>
-
-        <input type="checkbox"
-          name="accordion-{{ block_id }}"
-          id="accordion-{{ block_id }}-checkbox"
-          class="no-js no-js-checkbox"
-        >
-
-        <label for="accordion-{{ block_id }}-checkbox" class="accordion__title no-js">
-          {%- render 'icons', filename: block.settings.icon_find_in_store -%}
-          {{ block.settings.find_in_store_title }}
-        </label>
-
-        <div class="accordion__body no-js-accordion" id="{{ block_id }}" data-accordion-body>
-          <div class="accordion-content__holder">
-            <div class="accordion-content__inner">
-              <div
-                id="brauz-find-in-store-config-product-page"
-                data-sd="{{ shop.permanent_domain }}"
-                data-cvi="{{ product.first_available_variant.id }}"
-                data-hodv="{{ product.has_only_default_variant }}"
-                style="display: none; width: 0"
-                ></div> 
-              <div id="brauz-find-in-store-product-page"></div>
-              <script type="text/lazyload" src="https://d3aq2u4yw77ivo.cloudfront.net/find-in-store/shopify/tigerlily/find-in-store.shopify.tigerlily.prod.js" defer></script>
-            </div>
-          </div>
-        </div>
-      </div>
-    {%- endif -%}
   </div>
 {%- endif -%}
